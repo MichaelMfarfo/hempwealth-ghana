@@ -77,8 +77,8 @@
         --nav-bg: rgba(250, 248, 242, 0.93);
         --mob-bg: rgba(250, 248, 242, 0.99);
         --placeholder: #b0a58a;
-        --ghost-border: rgba(0, 0, 0, 0.15);
-        --ghost-hover: rgba(0, 0, 0, 0.04);
+        --ghost-border: rgba(0, 0, 0, 0.3);
+        --ghost-hover: rgba(201, 168, 76, 0.1);
         --scrollbar: #c8bfac;
         --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
       }
@@ -135,12 +135,36 @@
         opacity: 1;
         mix-blend-mode: screen;
         background:
-          radial-gradient(ellipse 55% 140% at 0% 50%,   rgba(25, 95, 45, 0.32) 0%, transparent 65%),
-          radial-gradient(ellipse 55% 140% at 100% 50%,  rgba(20, 80, 38, 0.26) 0%, transparent 65%),
-          radial-gradient(ellipse 90% 45% at 50% 0%,    rgba(18, 72, 35, 0.18) 0%, transparent 55%),
-          radial-gradient(ellipse 90% 45% at 50% 100%,  rgba(18, 72, 35, 0.16) 0%, transparent 55%),
-          radial-gradient(ellipse 70% 70% at 15% 25%,   rgba(22, 88, 42, 0.14) 0%, transparent 55%),
-          radial-gradient(ellipse 70% 70% at 85% 75%,   rgba(18, 75, 36, 0.12) 0%, transparent 55%);
+          radial-gradient(
+            ellipse 55% 140% at 0% 50%,
+            rgba(25, 95, 45, 0.32) 0%,
+            transparent 65%
+          ),
+          radial-gradient(
+            ellipse 55% 140% at 100% 50%,
+            rgba(20, 80, 38, 0.26) 0%,
+            transparent 65%
+          ),
+          radial-gradient(
+            ellipse 90% 45% at 50% 0%,
+            rgba(18, 72, 35, 0.18) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse 90% 45% at 50% 100%,
+            rgba(18, 72, 35, 0.16) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse 70% 70% at 15% 25%,
+            rgba(22, 88, 42, 0.14) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse 70% 70% at 85% 75%,
+            rgba(18, 75, 36, 0.12) 0%,
+            transparent 55%
+          );
       }
 
       img,
@@ -289,6 +313,12 @@
         background: var(--ghost-hover);
         transform: translateY(-2px);
       }
+      [data-theme="light"] .btn-ghost:hover {
+        border-color: var(--gold);
+        color: var(--gold-dim);
+        background: var(--gold-glow);
+        box-shadow: 0 4px 18px rgba(201, 168, 76, 0.2);
+      }
 
       /* ══════════════════════════════════════
        SCROLL PROGRESS BAR
@@ -351,7 +381,9 @@
         border-radius: 4px;
         transition: opacity 0.2s;
       }
-      .logo:hover .logo-img { opacity: 0.88; }
+      .logo:hover .logo-img {
+        opacity: 0.88;
+      }
       [data-theme="light"] .logo-img {
         filter: invert(1) hue-rotate(180deg) brightness(0.15) sepia(0.3);
       }
@@ -1246,7 +1278,9 @@
         color: var(--text-5);
         transition: color 0.2s;
       }
-      .footer-contact-list a:hover { color: var(--gold); }
+      .footer-contact-list a:hover {
+        color: var(--gold);
+      }
       .footer-contact-list .text {
         font-size: 0.82rem;
         color: var(--text-5);
@@ -1420,7 +1454,7 @@
       <div class="hero-orb"></div>
       <div class="container hero-content">
         <div class="hero-eyebrow reveal reveal-up">
-          Investment Prospectus · 2025
+          Investment Prospectus · 2026
         </div>
 
         <h1 class="hero-title reveal reveal-up d1">
@@ -1452,7 +1486,7 @@
             <div class="stat-label">Harvests Per Year</div>
           </div>
           <div class="stat-item">
-            <div class="stat-value" data-target="2024" data-suffix="">2024</div>
+            <div class="stat-value" data-target="2024" data-suffix="">2026</div>
             <div class="stat-label">Incorporated</div>
           </div>
         </div>
@@ -1688,7 +1722,7 @@
             <div class="gold-line reveal reveal-left d1"></div>
             <p class="section-body reveal reveal-left d2">
               Hempwealth Ghana is a wholly owned Ghanaian company incorporated
-              on May 17, 2024, under Companies Code 2019 (Act 992). It is
+              on May 17, 2026, under Companies Code 2019 (Act 992). It is
               governed by a diverse Board of Directors with expertise spanning
               banking, medicine, law, accountancy, and agronomy.
             </p>
@@ -1712,7 +1746,7 @@
               <div class="gov-stat">
                 <div class="gov-stat-icon">📅</div>
                 <div>
-                  <div class="gov-stat-title">Incorporated May 17, 2024</div>
+                  <div class="gov-stat-title">Incorporated May 17, 2026</div>
                   <div class="gov-stat-body">
                     Certificate of incorporation issued in Accra. The company is
                     in its growth-capital phase, seeking strategic investment
@@ -1903,7 +1937,9 @@
               </li>
               <li>
                 <span class="icon">✉️</span>
-                <a href="mailto:hempwealthgh@gmail.com" class="text">hempwealthgh@gmail.com</a>
+                <a href="mailto:hempwealthgh@gmail.com" class="text"
+                  >hempwealthgh@gmail.com</a
+                >
               </li>
               <li>
                 <span class="icon">📞</span>
@@ -1917,11 +1953,11 @@
         </div>
         <div class="footer-bottom">
           <p class="footer-copy">
-            © 2025 Hempwealth Ghana. All rights reserved.
+            © 2026 Hempwealth Ghana. All rights reserved.
           </p>
           <p class="footer-reg">
             Registered under Companies Code 2019 (Act 992) &nbsp;·&nbsp;
-            Certificate issued: May 17, 2024 &nbsp;·&nbsp; Accra, Ghana
+            Certificate issued: May 17, 2026 &nbsp;·&nbsp; Accra, Ghana
           </p>
         </div>
       </div>
