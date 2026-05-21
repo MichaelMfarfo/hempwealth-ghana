@@ -39,6 +39,7 @@
         --bg-footer: #080808;
         --border: rgba(201, 168, 76, 0.2);
         --gold-glow: rgba(201, 168, 76, 0.12);
+        --green-glow: rgba(20, 80, 40, 0.18);
         --text: #e8e2d4;
         --text-2: #b0a898;
         --text-3: #9a9080;
@@ -115,6 +116,13 @@
         font-family: var(--sans);
         line-height: 1.7;
         overflow-x: hidden;
+      }
+
+      [data-theme="dark"] body {
+        background:
+          radial-gradient(ellipse 130% 65% at -8% 0%, rgba(15, 55, 25, 0.22) 0%, transparent 45%),
+          radial-gradient(ellipse 90% 55% at 108% 100%, rgba(10, 48, 22, 0.18) 0%, transparent 45%),
+          #0a0a0a;
       }
 
       img,
@@ -537,6 +545,30 @@
           );
         pointer-events: none;
         will-change: transform;
+      }
+
+      [data-theme="dark"] .hero-bg {
+        background:
+          radial-gradient(
+            ellipse 80% 60% at 70% 40%,
+            rgba(201, 168, 76, 0.07) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 50% 40% at 20% 70%,
+            rgba(201, 168, 76, 0.04) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse 75% 60% at 0% 5%,
+            rgba(20, 80, 40, 0.28) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse 55% 45% at 100% 90%,
+            rgba(15, 62, 28, 0.2) 0%,
+            transparent 50%
+          );
       }
       [data-theme="light"] .hero-bg {
         background:
