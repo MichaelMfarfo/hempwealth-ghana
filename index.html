@@ -119,10 +119,28 @@
       }
 
       [data-theme="dark"] body {
+        background: #0a0a0a;
+      }
+
+      /* ── Full-page green atmospheric glow ── */
+      #page-glow {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      [data-theme="dark"] #page-glow {
+        opacity: 1;
+        mix-blend-mode: screen;
         background:
-          radial-gradient(ellipse 130% 65% at -8% 0%, rgba(15, 55, 25, 0.22) 0%, transparent 45%),
-          radial-gradient(ellipse 90% 55% at 108% 100%, rgba(10, 48, 22, 0.18) 0%, transparent 45%),
-          #0a0a0a;
+          radial-gradient(ellipse 55% 140% at 0% 50%,   rgba(25, 95, 45, 0.32) 0%, transparent 65%),
+          radial-gradient(ellipse 55% 140% at 100% 50%,  rgba(20, 80, 38, 0.26) 0%, transparent 65%),
+          radial-gradient(ellipse 90% 45% at 50% 0%,    rgba(18, 72, 35, 0.18) 0%, transparent 55%),
+          radial-gradient(ellipse 90% 45% at 50% 100%,  rgba(18, 72, 35, 0.16) 0%, transparent 55%),
+          radial-gradient(ellipse 70% 70% at 15% 25%,   rgba(22, 88, 42, 0.14) 0%, transparent 55%),
+          radial-gradient(ellipse 70% 70% at 85% 75%,   rgba(18, 75, 36, 0.12) 0%, transparent 55%);
       }
 
       img,
@@ -1224,6 +1242,11 @@
         flex-shrink: 0;
         margin-top: 2px;
       }
+      .footer-contact-list a {
+        color: var(--text-5);
+        transition: color 0.2s;
+      }
+      .footer-contact-list a:hover { color: var(--gold); }
       .footer-contact-list .text {
         font-size: 0.82rem;
         color: var(--text-5);
@@ -1344,6 +1367,9 @@
   <body>
     <!-- Scroll progress -->
     <div id="progress-bar"></div>
+
+    <!-- Full-page green glow overlay -->
+    <div id="page-glow" aria-hidden="true"></div>
 
     <!-- ══ NAV ══ -->
     <nav id="navbar">
@@ -1877,11 +1903,14 @@
               </li>
               <li>
                 <span class="icon">✉️</span>
-                <span class="text">hempwealthgh@gmail.com</span>
+                <a href="mailto:hempwealthgh@gmail.com" class="text">hempwealthgh@gmail.com</a>
               </li>
               <li>
                 <span class="icon">📞</span>
-                <span class="text">+233 20 720 2905<br />+233 24 986 1352</span>
+                <span class="text">
+                  <a href="tel:+233207202905">+233 20 720 2905</a><br />
+                  <a href="tel:+233249861352">+233 24 986 1352</a>
+                </span>
               </li>
             </ul>
           </div>
